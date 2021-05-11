@@ -23,7 +23,6 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nama"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="336dp"
         android:layout_height="64dp"
@@ -38,6 +37,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nama"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Nama"
@@ -47,7 +47,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="336dp"
         android:layout_height="64dp"
@@ -62,6 +61,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Email"
@@ -71,7 +71,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="338dp"
         android:layout_height="60dp"
@@ -86,6 +85,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Password"
@@ -95,7 +95,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/repassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="338dp"
         android:layout_height="60dp"
@@ -110,6 +109,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Re-Password"
@@ -119,7 +119,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/loginbutton"
+        android:id="@+id/registerbutton"
         android:layout_width="98dp"
         android:layout_height="37dp"
         android:background="@drawable/roundedbutton"
@@ -134,5 +134,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.744"
         tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="107dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="176dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

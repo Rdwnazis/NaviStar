@@ -25,4 +25,16 @@
         android:textColor="@color/white"
         android:textSize="24dp" />
 
+    <Button
+        android:id="@+id/buttonlogout"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/logout"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
 </RelativeLayout>
