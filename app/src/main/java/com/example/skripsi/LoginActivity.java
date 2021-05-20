@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         loginbutton = findViewById(R.id.loginbutton);
-        loginbutton.setOnClickListener(new View.OnClickListener() {
+        loginbutton.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view) {
                 String mEmail = email.getText().toString().trim();
@@ -70,11 +70,11 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     email.setError("Please insert username or email");
                     password.setError("Please insert password");
+                }
             }
-        }
-    });
+        });
+    }
 
-}
     @Override
     protected void onStart() {
         super.onStart();
@@ -96,14 +96,14 @@ public class LoginActivity extends AppCompatActivity {
 
         backPressedTime = System.currentTimeMillis();
     }
-    private void login(final String mEmail, final String mPassword) {
+    private void login(final String email, final String password) {
         Prefrences.setLoggedInStatus(getBaseContext(),true);
         loading.setVisibility(View.VISIBLE);
         loginbutton.setVisibility(View.GONE);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
                 new Response.Listener<String>() {
-                    @Override
+            @Override
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonObject = new JSONObject (response);
@@ -137,8 +137,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError{
                 Map<String, String> params = new HashMap<>();
-                params.put("email", mEmail);
-                params.put("password", mPassword);
+                params.put("email", email);
+                params.put("password", password);
                 return params;
             }
         };

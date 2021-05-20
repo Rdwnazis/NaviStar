@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
                             success = jsonObject.optString("success");
 
                             if (success.equals("1")) {
-                                Toast.makeText(RegisterActivity.this, "Register Success!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "Register Berhasil", Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                             }
 
