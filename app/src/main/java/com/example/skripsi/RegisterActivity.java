@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.skripsi.http.Connect;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText nama, email, password, repassword;
     private Button registerbutton;
     private ProgressBar loading;
-    private static  String URL_REGIST = "http://192.168.1.3/navistar_backend/register.php";
     String success;
 
     @Override
@@ -56,13 +56,12 @@ public class RegisterActivity extends AppCompatActivity {
     private void Regist() {
         loading.setVisibility(View.VISIBLE);
         registerbutton.setVisibility(View.GONE);
-
         final String nama = this.nama.getText().toString().trim();
         final  String email = this.email.getText().toString().trim();
         final String password = this.password.getText().toString().trim();
         final String repassword = this.repassword.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGIST,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Connect.URLBASE + "/register.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

@@ -19,10 +19,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.skripsi.http.Connect;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.prefs.Preferences;
@@ -33,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
     private Toast backToast;
     private Button loginbutton;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.1.3/navistar_backend/login.php";
 
 
     private static final String TAG = LoginActivity.class.getSimpleName();
@@ -101,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
         loading.setVisibility(View.VISIBLE);
         loginbutton.setVisibility(View.GONE);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Connect.URLBASE + "/login.php",
                 new Response.Listener<String>() {
             @Override
                     public void onResponse(String response) {
