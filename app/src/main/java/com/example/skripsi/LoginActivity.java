@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
             startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(startMain);
         } else {
-            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast = Toast.makeText(getBaseContext(), "Tekan Kembali Sekali Lagi Untuk Keluar", Toast.LENGTH_SHORT);
             backToast.show();
         }
 

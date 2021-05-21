@@ -112,7 +112,7 @@ public class AduanActivity extends FragmentActivity implements OnMapReadyCallbac
                             LatLng latLng = new LatLng(location.getLatitude(),
                                     location.getLongitude());
                             MarkerOptions options = new MarkerOptions().position(latLng)
-                                    .title("You Are Here");
+                                    .title("Anda Berada Disini");
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
                             options .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
                             googleMap.addMarker(options);

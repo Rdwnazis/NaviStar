@@ -87,7 +87,7 @@ public class HomeActivity extends AppCompatActivity {
                             LatLng latLng = new LatLng(location.getLatitude(),
                                     location.getLongitude());
                             MarkerOptions options = new MarkerOptions().position(latLng)
-                                    .title("You Are Here");
+                                    .title("Anda Berada Disini");
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
                             googleMap.addMarker(options);
 
@@ -117,7 +117,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(startMain);
 
         } else {
-            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast = Toast.makeText(getBaseContext(), "Tekan Kembali Seksli Lagi Untuk Keluar", Toast.LENGTH_SHORT);
             backToast.show();
         }
 
