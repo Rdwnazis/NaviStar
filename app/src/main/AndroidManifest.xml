@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.skripsi">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -15,14 +20,15 @@
             android:theme="@style/Register"></activity>
         <activity
             android:name=".AduanActivity"
-            android:theme="@style/Register" />
+            android:theme="@style/HomeStyle" />
         <activity
             android:name=".HomeActivity"
             android:theme="@style/HomeStyle" />
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/Register" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:theme="@style/HomeStyle"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/SplashScreenStyle">
@@ -35,7 +41,9 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCSLBng5Fn2HKNRETx4tAdhphtdkwP-Jfs" />
+            android:value="AIzaSyBaLyuNfSti_jbXZ9CDFFp_G4CWp3Zm26I" />
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 

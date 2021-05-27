@@ -4,15 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EAE9A7"
     tools:context=".RegisterActivity">
 
+    <Button
+        android:id="@+id/registerbutton"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#948F47"
+        android:text="Register"
+        android:textColor="@color/white"
+        app:elevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="107dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="176dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/rock"
         android:text="Register."
-        android:textColor="#F65959"
+        android:textColor="#34656D"
         android:textSize="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,65 +52,17 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="336dp"
-        android:layout_height="64dp"
-        android:textColorHint="#000000"
-        app:boxStrokeColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Nama"
-            android:inputType="textPersonName"
-            android:textColor="#000000"
-            tools:ignore="MissingConstraints" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="336dp"
-        android:layout_height="64dp"
-        android:textColorHint="#000000"
-        app:boxStrokeColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000"
-            tools:ignore="MissingConstraints" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="338dp"
         android:layout_height="60dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="28dp"
         android:textColorHint="#000000"
         app:boxStrokeColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -98,14 +79,13 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="338dp"
         android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="27dp"
         android:textColorHint="#000000"
         app:boxStrokeColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -118,31 +98,49 @@
             tools:ignore="MissingConstraints" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/registerbutton"
-        android:layout_width="98dp"
-        android:layout_height="37dp"
-        android:background="@drawable/roundedbutton"
-        android:backgroundTint="#F65959"
-        android:text="Register"
-        android:textColor="@color/white"
-        app:elevation="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744"
-        tools:ignore="MissingConstraints" />
-
-    <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="107dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="336dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="176dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nama"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="336dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
