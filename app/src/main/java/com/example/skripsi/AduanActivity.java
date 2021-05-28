@@ -51,6 +51,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.prefs.Preferences;
 
 public class AduanActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -100,6 +101,8 @@ public class AduanActivity extends FragmentActivity implements OnMapReadyCallbac
     private void Aduan() {
         loading.setVisibility(View.VISIBLE);
         buttonsubmit.setVisibility(View.GONE);
+        final  String email = Prefrences.getLoggedInUser(getBaseContext()).toString().trim();
+        Log.e("email", Prefrences.getLoggedInUser(getBaseContext()) );
         final String keluhan = this.keluhan.getText().toString().trim();
         final  String deskripsi = this.deskripsi.getText().toString().trim();
         final  String posisi = this.posisi.getText().toString().trim();
@@ -139,6 +142,7 @@ public class AduanActivity extends FragmentActivity implements OnMapReadyCallbac
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
+                params.put("email", email);
                 params.put("keluhan", keluhan);
                 params.put("deskripsi", deskripsi);
                 params.put("posisi", posisi);

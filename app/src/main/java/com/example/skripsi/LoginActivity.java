@@ -98,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
         backPressedTime = System.currentTimeMillis();
     }
     private void login(final String email, final String password) {
+        Prefrences.setLoggedInUser(getBaseContext(), email);
         Prefrences.setLoggedInStatus(getBaseContext(),true);
         loading.setVisibility(View.VISIBLE);
         loginbutton.setVisibility(View.GONE);
