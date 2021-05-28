@@ -181,7 +181,7 @@ public class JalurAlternatif extends FragmentActivity implements OnMapReadyCallb
                     .withListener(this)
                     .alternativeRoutes(true)
                     .waypoints(Start, End)
-                    .key("AIzaSyBaLyuNfSti_jbXZ9CDFFp_G4CWp3Zm26I")  //also define your api key here.
+                    .key("AIzaSyBaLyuNfSti_jbXZ9CDFFp_G4CWp3Zm26I")
                     .build();
             routing.execute();
         }
